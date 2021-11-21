@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: compute-quota # Name of Resource Quota
+  namespace: dev # Name of the Namespace this Quota applies to
+spec:
+  hard:
+    pods: 10
+    requests.cpu: 4
+    requests.memory: 5Gi
+    limits.cpu: 10
+    limits.memory: 10Gi

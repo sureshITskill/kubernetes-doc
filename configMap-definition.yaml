@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-first-configmap
+data:
+  app_color: red
+  app_name: my_app
+
+# Note: Refer the configMap-pod.yaml file on how to inject this configMap to pod definition file.
+

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: my-first-daemonset
+  labels:
+    name: my-first-daemonset
+    tier: front-end
+spec:
+  selector:
+    matchLabels:
+      tier: front-end
+  template:
+    metadata:
+      name: pod-yaml
+      labels:
+        name: pod-yaml
+        tier: front-end
+    spec:
+      containers:
+        - name: yaml-container
+          image: nginx

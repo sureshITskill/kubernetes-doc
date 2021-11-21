@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-yaml
+  #namespace: dev # Creates the pod in the dev namespace
+  labels:
+    name: pod-yaml
+    tier: frontend
+spec:
+  containers:
+    - name: yaml-container
+      image: nginx
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: 1
+        limits:
+          memory: "2Gi"
+          cpu: 2
+  #nodeName: node01 # Schedules the pod in the given node.
+
+  # The below code will enable Toleration on the tainted nodes
+  
+  #tolerations:
+   # - key: "app"
+    #  operator: "Equal"
+     # value: "blue"
+      #effect: "NoSchedule"
